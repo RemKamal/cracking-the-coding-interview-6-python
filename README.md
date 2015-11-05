@@ -1,1 +1,3 @@
-# Solutions for Cracking the Coding Interview (Edition 6) in Python
+# Cracking the Coding Interview, 6th Edition
+---
+Python Solution
