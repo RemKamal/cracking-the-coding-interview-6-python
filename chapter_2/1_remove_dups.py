@@ -1,6 +1,7 @@
 import unittest
 from linked_list import *
 
+# time: O(n) space: O(n)
 def remove_dups(linked_list):
     node = linked_list.head
     tracer = [node.value]
