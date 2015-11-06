@@ -1,3 +1,5 @@
+from random import randint
+
 class LinkedList():
     """Helper function to create a linked list in Python"""
     def __init__(self):
@@ -49,11 +51,22 @@ class LinkedList():
     def __iter__(self):
         node = self.head
         while node is not None:
-        	yield node.value
-        	node = node.next
+            yield node.value
+            node = node.next
 
     def __str__(self):
-    	return str(self.head)
+        node = self.head
+        result = ""
+        while node is not None:
+            item = node.value
+            node = node.next
+            if node is None:
+                linked = None
+            else:
+                linked = node.value
+            result += str(item) + " -> " + str(linked) + "\n"
+        return result
+
 
         
 class Node():
@@ -70,3 +83,10 @@ class Node():
 
     def __str__(self):
         return str((self.value, self.next))
+
+def random_list():
+	ll = LinkedList()
+	for i in range(15):
+		ll.insert(i)
+		ll.insert(randint(0, 20))
+	return ll
