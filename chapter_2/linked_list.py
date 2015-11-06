@@ -93,6 +93,14 @@ class Node():
     def __str__(self):
         return str((self.value, self.next))
 
+    def __eq__(self, new_node):
+        if self.next is None:
+            return self.value == new_node.value and new_node.next is None
+        elif new_node.next is not None:
+            return self.value == new_node.value and self.next.value == new_node.next.value
+        else:
+            return False
+
 def random_list(n, random_state=42):
     ll = LinkedList()
     random.seed(random_state)
