@@ -4,22 +4,16 @@ class LinkedList():
     """Helper function to create a linked list in Python"""
     def __init__(self):
         self.head = None
+        self.size = 0
 
     def insert(self, item):
         node = Node(item)
         node.set_next(self.head)
         self.head = node
-
-    def size(self):
-        node = self.head
-        count = 0
-        while node is not None:
-            count += 1
-            node = node.next
-        return count
+        self.size += 1
 
     def __len__(self):
-        return self.size()
+        return self.size
 
     def search(self, item):
         node = self.head
@@ -50,6 +44,7 @@ class LinkedList():
             self.head = node.next
         else:
             previous.set_next(node.next)
+        self.size -= 1
 
     def __iter__(self):
         node = self.head
