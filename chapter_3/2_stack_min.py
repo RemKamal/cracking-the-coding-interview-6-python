@@ -1,6 +1,12 @@
 import unittest
 
 class Stack():
+	"""
+		Space: O(n)
+		Push: O(1)
+		Pop: O(1)
+		Min: O(1)
+	"""
 
 	def __init__(self):
 		self.size = 0
