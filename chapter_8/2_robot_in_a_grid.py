@@ -52,12 +52,23 @@ class Grid():
 				
 		return "not found"
 
+class Test(unittest.TestCase):
 
-g = Grid(3, 3)
-for node in [(0, 1), (1, 2), (2, 0)]:
-	g.add_block(*node)
-print g
-print g.destination == (2, 2)
-print g.find_path()
+	def test(self):
 
-expected = [[(0, 0), (1, 0), (1, 1), (2, 1), (2, 2)]]
+		g1 = Grid(3, 3)
+		for node in [(0, 1), (1, 2), (2, 0)]:
+			g1.add_block(*node)
+
+		g2 = Grid(5, 5)
+		for node in [(0, 1), (2, 0), (2, 1), (4, 2), (1, 3), (2, 3), (3, 4)]:
+			g2.add_block(*node)
+
+		expected1 = [(0, 0), (1, 0), (1, 1), (2, 1), (2, 2)]
+		expected2 = [(0, 0), (1, 0), (1, 1), (1, 2), (2, 2), (3, 2), (3, 3), (4, 3), (4, 4)]
+
+		self.failUnlessEqual(g1.find_path(), expected1)
+		self.failUnlessEqual(g2.find_path(), expected2)
+
+if __name__ == '__main__':
+	unittest.main()
