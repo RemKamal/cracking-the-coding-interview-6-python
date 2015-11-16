@@ -1,5 +1,6 @@
 import unittest
 
+# Time: lg(N) Space: in-place
 def rec_multiply(a, b):
 	if b == 0: return 0
 	if b == 1: return a
