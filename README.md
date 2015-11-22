@@ -1,5 +1,10 @@
 # Cracking the Coding Interview, 6th Edition
 
-I love Python. And I found no purely python solutions repo exsiting online for all the questions listed in the book, that's why I decided to create this one.
+Solutions in Python.
 
-You are welcome to contribute. Together we could find the best and most beautiful solutions, and hopefully we could help others like me who always want to know more!
+## How to use
+There are two parts in the solutions, one is the thoughts/processes when solving those problems, the other is the code.
+Since I think the thoughts/processes are more important than the code, all the code are put under chapters/code.
+The other thing is that I personally like using Ipython Notebook. If you are not familiar with it, that's fine, you could find all files in html format under chapters/html.
+
+Happy coding!
