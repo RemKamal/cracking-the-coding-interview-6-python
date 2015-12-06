@@ -2,10 +2,6 @@
 
 Solutions in Python.
 
-## Elevator
-
-[Chapter 1]()
-
 ## How to use
 There are two parts in the solutions, one is the thoughts/processes when solving those problems, the other is the code.
 Since I think the thoughts/processes are more important than the code, all the code are put under chapters/code.
